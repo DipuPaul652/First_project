@@ -3,10 +3,16 @@ using namespace std;
 
 int main()
 {
-    cout<<"Hello world!"<<endl;
-    cout<<"Enter your name: ";
-    string n;
-    cin>>n;
-    cout<<"Hello "<<n<<endl;
+    cout<<"Enter your age: ";
+    int x;
+    cin>>x;
+
+    if(x>=18){
+        cout<<"You can vote"<<endl;
+    }
+    else{
+        cout<<"You can not vote"<<endl;
+    }
+
     return 0;
 }
