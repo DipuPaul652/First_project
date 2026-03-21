@@ -17,7 +17,7 @@ int main()
     return 0;
 }*/
 
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -33,7 +33,7 @@ int main()
         if((2*b-c)>0 && (2*b-c)%a==0){
             found=1;
         }
-        else if(((a+c)/2)%2==0 && ((a+c)/2)%b==0){
+        else if((a+c)%2==0 && ((a+c)/2)%b==0){
             found=1;
         }
         else if((2*b-a)>0 && (2*b-a)%c==0){
@@ -46,5 +46,35 @@ int main()
         cout<<"NO"<<endl;
     }
 
+    return 0;
+}*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+//codeforces 1542A
+
+int main()
+{
+    int t;
+    cin>>t;
+
+    while(t--){
+        int n;
+        cin>>n;
+
+        int oddc=0;
+        for(int i=0;i<2*n;i++){
+            int x;
+            cin>>x;
+
+            if(x%2!=0)
+            oddc++;
+        }
+        if(oddc==n)
+        cout<<"YES"<<endl;
+        else
+        cout<<"NO"<<endl;
+    }
     return 0;
 }
