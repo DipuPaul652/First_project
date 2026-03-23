@@ -79,7 +79,7 @@ int main()
     return 0;
 }*/
 
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -106,5 +106,55 @@ int main()
         cout<<6<<endl;
     }
     
+    return 0;
+}*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+
+    while(t--){
+      int n;
+      cin>>n;
+
+      int count2=0;
+
+      vector<int>v(n);
+      for(int i=0;i<n;i++){
+        cin>>v[i];
+        if(v[i]==2)
+        count2++;
+      }
+      
+      if(count2%2!=0){
+      cout<<-1<<endl;
+      }
+      else{
+        if(count2>0)
+        {
+            int need=count2/2;
+            int ans =0;
+
+            for(int i=0;i<n;i++){
+                if(v[i]==2)
+                ans++;
+
+                if(ans==need){
+                    cout<<i+1<<endl;
+                    break;
+                }
+            }
+        }
+        else{
+            cout<<1<<endl;
+        }
+      }
+
+    }
+
     return 0;
 }
