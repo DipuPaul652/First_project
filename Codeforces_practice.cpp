@@ -109,7 +109,7 @@ int main()
     return 0;
 }*/
 
-#include<bits/stdc++.h>
+/*#include<bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -157,4 +157,123 @@ int main()
     }
 
     return 0;
-}
+}*/
+
+/*#include<bits/stdc++.h>
+using namespace std;
+
+//codeforces 489C
+
+int main()
+{
+    int m,s;
+    cin>>m>>s;
+
+    if(s==0){
+        if(m==1){
+        cout<<0<<" "<<0<<endl;
+        }
+        else{
+            cout<<-1<<" "<<-1<<endl;
+        }
+        return 0;
+    }
+
+    if(s>9*m){
+        cout<<-1<<" "<<-1<<endl;
+        return 0;
+    }
+
+    int sum=s;
+    string mx="";
+
+    for(int i=0;i<m;i++){
+        int dig=min(9,sum);
+        mx+=(dig+'0');
+        sum-=dig;
+    }
+
+    sum=s;
+    string mn(m,0);
+    
+    for(int i=m-1;i>=0;i--){
+        int dig=max(0,sum-9*i);
+
+        if(i==m-1 && dig==0)
+        dig=1;
+
+        mn[m-i-1]=dig+'0';
+        sum-=dig;
+    }
+
+
+    cout<<mn<<" "<<mx<<endl;
+
+    return 0;
+}*/
+
+/*#include<bits/stdc++.h>
+using namespace std;
+
+//1373B
+
+int main()
+{
+    int t;
+    cin>>t;
+
+    while (t--)
+    {
+        string s;
+        cin>>s;
+
+        int cou1=0,cou0=0;
+
+        for(int i=0;i<s.size();i++){
+            if(s[i]=='0')
+            cou0++;
+            else
+            cou1++;
+        }
+
+        int term= min(cou0,cou1);
+
+        if(term%2==0)
+        cout<<"NET"<<endl;
+        else
+        cout<<"DA"<<endl;
+    }
+
+    return 0;
+}*/
+
+/*#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+
+    if(n<m){
+        cout<<-1<<endl;
+        return 0;
+    }
+
+    int step=(n+1)/2;
+
+    while(step%m!=0){
+        step++;
+    }
+
+    if(step<=n){
+        cout<<step<<endl;
+    }
+    else{
+        cout<<-1<<endl;
+    }
+    return 0;
+}*/
+
+
+
