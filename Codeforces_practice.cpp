@@ -275,5 +275,171 @@ int main()
     return 0;
 }*/
 
+/*#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+
+    while(t--){
+        string s;
+        cin>>s;
+
+        reverse(s.begin(),s.end());
+
+        for(int i=0;i<s.size();i++){
+            if(s[i]=='p')
+            cout<<'q';
+            else if(s[i]=='q')
+            cout<<'p';
+            else
+            cout<<'w';
+        }
+        cout<<endl;
+
+    }
+    return 0;
+}*/
+
+/*#include<bits/stdc++.h>
+using namespace std;
+
+//Binary Search
+
+int BS(vector<int> &arr, int ter){
+    int st=0,end=arr.size()-1;
+
+    while(st<=end){
+        long long mid=(st+end)/2;
+        
+        if(ter>arr[mid]){
+            st=mid+1;
+        }
+        else if(ter<arr[mid]){
+            end=mid-1;
+        }
+        else
+        return mid;
+    }
+    return -1;
+}
 
 
+int main()
+{
+    int n;
+    cin>>n;
+
+    vector<int>v(n);
+
+    for(int i=0;i<n;i++){
+        cin>>v[i];
+    }
+    
+    sort(v.begin() , v.end());
+
+    int q;
+    cin>>q;
+    
+    while(q--){
+        int x;
+        cin>>x;
+
+        int re=BS(v,x);
+        if(re==-1)
+        cout<<0<<endl;
+        else
+        cout<<re+1<<endl;
+    }
+    return 0;
+}*/
+
+
+/*#include<bits/stdc++.h>
+using namespace std;
+
+//codeforces 706B
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    vector<int>v(n);
+
+    for(int i=0;i<n;i++){
+        cin>>v[i];
+    }
+
+    sort(v.begin(),v.end());
+
+    int q;
+    cin>>q;
+
+    while(q--){
+        int x;
+        cin>>x;
+
+        int ans=upper_bound(v.begin(),v.end(),x)- v.begin();
+
+        cout<<ans<<endl;
+    }
+
+    return 0;
+}*/
+
+/*#include<bits/stdc++.h>
+using namespace std;
+
+//codeforces 474B
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    vector<int>v(n),t(n);
+    for(int i=0;i<n;i++){
+        cin>>v[i];
+    }
+
+    t[0]=v[0];
+    for(int i=1;i<n;i++){
+      t[i]=t[i-1]+v[i];
+    }
+
+    int q;
+    cin>>q;
+
+    while(q--){
+        int x;
+        cin>>x;
+
+        int ans=lower_bound(t.begin(),t.end(),x)-t.begin();
+        cout<<ans+1<<endl;
+    }
+    return 0;
+}*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+//codeforces 1371A
+
+int main()
+{
+    int t;
+    cin>>t;
+
+    while(t--){
+        int x;
+        cin>>x;
+
+        int ans=(x+1)/2;
+        cout<<ans<<endl;
+    }
+
+    return 0;
+}
